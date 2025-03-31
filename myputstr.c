@@ -1,5 +1,6 @@
-//
-// Created by ryrym_i6sf5hg on 3/31/2025.
-//
 
 #include "myputstr.h"
+
+
+void my_putchar(char c);
+void my_putstr(char *str);
