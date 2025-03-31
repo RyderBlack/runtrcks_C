@@ -6,4 +6,6 @@ set(CMAKE_C_STANDARD 99)
 add_executable(Runtracks_C main.c
         myputstr.c
         myputstr.h
+        my_strlen.c
+        my_strlen.h
 )
