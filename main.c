@@ -10,6 +10,7 @@
 #include "Day01/my_strdup.h"
 #include "Day01/trim.h"
 #include "Day01/split.h"
+#include "Day02/divide.h"
 
 
 int main(void) {
@@ -55,23 +56,27 @@ int main(void) {
     //     free(result1);
     // }
 
-    char *str = " Oh, Hi Mark!";
-    char **result = split(str);
-    if (result == NULL) {
-        printf("error allocating memory !\n");
-        return 1;
-    }
+    // char *str = " Oh, Hi Mark!";
+    // char **result = split(str);
+    // if (result == NULL) {
+    //     printf("error allocating memory !\n");
+    //     return 1;
+    // }
+    //
+    // printf("String : \"%s\"\n", str);
+    // for (int i = 0; result[i] != NULL; i++) {
+    //     printf("Word %d : \"%s\"\n", i + 1, result[i]);
+    // }
+    //
+    // // FREE MEMORY !!!!!
+    // for (int i = 0; result[i] != NULL; i++) {
+    //     free(result[i]);
+    // }
+    // free(result);
 
-    printf("String : \"%s\"\n", str);
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("Word %d : \"%s\"\n", i + 1, result[i]);
-    }
-
-    // FREE MEMORY !!!!!
-    for (int i = 0; result[i] != NULL; i++) {
-        free(result[i]);
-    }
-    free(result);
+    int a = 30;
+    my_divide(&a);
+    printf("Result is : %d\n", a);
 
     return 0;
 }

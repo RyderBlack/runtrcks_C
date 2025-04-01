@@ -20,4 +20,6 @@ add_executable(Runtracks_C main.c
         Day01/trim.h
         Day01/split.c
         Day01/split.h
+        Day02/divide.c
+        Day02/divide.h
 )
