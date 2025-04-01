@@ -12,4 +12,6 @@ add_executable(Runtracks_C main.c
         Day01/char_is_digit.h
         Day01/my_strcpy.c
         Day01/my_strcpy.h
+        Day01/my_strdup.c
+        Day01/my_strdup.h
 )
