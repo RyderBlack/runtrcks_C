@@ -8,4 +8,6 @@ add_executable(Runtracks_C main.c
         myputstr.h
         my_strlen.c
         my_strlen.h
+        char_is_digit.c
+        char_is_digit.h
 )
