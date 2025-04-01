@@ -4,10 +4,12 @@ project(Runtracks_C C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(Runtracks_C main.c
-        myputstr.c
-        myputstr.h
-        my_strlen.c
-        my_strlen.h
-        char_is_digit.c
-        char_is_digit.h
+        Day01/myputstr.c
+        Day01/myputstr.h
+        Day01/my_strlen.c
+        Day01/my_strlen.h
+        Day01/char_is_digit.c
+        Day01/char_is_digit.h
+        Day01/my_strcpy.c
+        Day01/my_strcpy.h
 )
