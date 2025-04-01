@@ -12,6 +12,8 @@
 #include "Day01/split.h"
 #include "Day02/divide.h"
 #include "Day02/my_swap.h"
+#include "Day02/array_clone.h"
+
 
 int main(void) {
     // my_putchar('T');
@@ -78,12 +80,35 @@ int main(void) {
     // my_divide(&a);
     // printf("Result is : %d\n", a);
 
-    int x = 10;
-    int y = 20;
+    // int x = 10;
+    // int y = 20;
+    //
+    // printf("original : x = %d, y = %d\n", x, y);
+    // swap(&x, &y);
+    // printf("after swap : x = %d, y = %d\n", x, y);
 
-    printf("original : x = %d, y = %d\n", x, y);
-    swap(&x, &y);
-    printf("after swap : x = %d, y = %d\n", x, y);
+    char *original[] = {
+        "Hello",
+        "world",
+        "this",
+        "is",
+        "Cloning",
+        NULL
+    };
+
+    int n = 3;
+    char **copy = array_clone(original, n);
+
+
+    printf("cloned array :\n");
+    for (int i = 0; copy[i] != NULL; i++) {
+        printf("copy[%d] = %s\n", i, copy[i]);
+    }
+
+    for (int i = 0; copy[i] != NULL; i++) {
+        free(copy[i]);
+    }
+    free(copy);
 
     return 0;
 }
