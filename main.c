@@ -11,7 +11,7 @@
 #include "Day01/trim.h"
 #include "Day01/split.h"
 #include "Day02/divide.h"
-
+#include "Day02/my_swap.h"
 
 int main(void) {
     // my_putchar('T');
@@ -74,9 +74,16 @@ int main(void) {
     // }
     // free(result);
 
-    int a = 30;
-    my_divide(&a);
-    printf("Result is : %d\n", a);
+    // int a = 30;
+    // my_divide(&a);
+    // printf("Result is : %d\n", a);
+
+    int x = 10;
+    int y = 20;
+
+    printf("original : x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("after swap : x = %d, y = %d\n", x, y);
 
     return 0;
 }

@@ -22,4 +22,6 @@ add_executable(Runtracks_C main.c
         Day01/split.h
         Day02/divide.c
         Day02/divide.h
+        Day02/my_swap.c
+        Day02/my_swap.h
 )
