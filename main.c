@@ -8,6 +8,7 @@
 #include "Day01/my_strcmp.h"
 #include "Day01/my_strcpy.h"
 #include "Day01/my_strdup.h"
+#include "Day01/trim.h"
 
 
 int main(void) {
@@ -38,10 +39,20 @@ int main(void) {
     // free(copy);
 
 
-    char *s1 = "Bonjour";
-    char *s2 = "Bonsoir";
-    int result = my_strcmp(s1, s2);
-    printf("%s vs %s -> %d \n", s1, s2, result);
+    // char *s1 = "Bonjour";
+    // char *s2 = "Bonsoir";
+    // int result = my_strcmp(s1, s2);
+    // printf("%s vs %s -> %d \n", s1, s2, result);
+
+
+    char *s1 = " hello world ";
+    char *result1 = trim(s1);
+    if (result1 == NULL) {
+        printf("error allocating memory!! \n");
+    } else {
+        printf("Result is: \"%s\" -> \"%s\"\n", s1, result1);
+        free(result1);
+    }
 
     return 0;
 }

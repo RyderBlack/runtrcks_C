@@ -16,4 +16,6 @@ add_executable(Runtracks_C main.c
         Day01/my_strdup.h
         Day01/my_strcmp.c
         Day01/my_strcmp.h
+        Day01/trim.c
+        Day01/trim.h
 )
