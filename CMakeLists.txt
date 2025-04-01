@@ -18,4 +18,6 @@ add_executable(Runtracks_C main.c
         Day01/my_strcmp.h
         Day01/trim.c
         Day01/trim.h
+        Day01/split.c
+        Day01/split.h
 )

@@ -9,6 +9,7 @@
 #include "Day01/my_strcpy.h"
 #include "Day01/my_strdup.h"
 #include "Day01/trim.h"
+#include "Day01/split.h"
 
 
 int main(void) {
@@ -45,14 +46,32 @@ int main(void) {
     // printf("%s vs %s -> %d \n", s1, s2, result);
 
 
-    char *s1 = " hello world ";
-    char *result1 = trim(s1);
-    if (result1 == NULL) {
-        printf("error allocating memory!! \n");
-    } else {
-        printf("Result is: \"%s\" -> \"%s\"\n", s1, result1);
-        free(result1);
+    // char *s1 = " hello world ";
+    // char *result1 = trim(s1);
+    // if (result1 == NULL) {
+    //     printf("error allocating memory!! \n");
+    // } else {
+    //     printf("Result is: \"%s\" -> \"%s\"\n", s1, result1);
+    //     free(result1);
+    // }
+
+    char *str = " Oh, Hi Mark!";
+    char **result = split(str);
+    if (result == NULL) {
+        printf("error allocating memory !\n");
+        return 1;
     }
+
+    printf("String : \"%s\"\n", str);
+    for (int i = 0; result[i] != NULL; i++) {
+        printf("Word %d : \"%s\"\n", i + 1, result[i]);
+    }
+
+    // FREE MEMORY !!!!!
+    for (int i = 0; result[i] != NULL; i++) {
+        free(result[i]);
+    }
+    free(result);
 
     return 0;
 }
