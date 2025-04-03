@@ -23,6 +23,7 @@
 #include "Day03/my_power.h"
 #include "Day03/my_sqrt.h"
 #include "Day03/job05.h"
+#include "Day03/fibonacci.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {

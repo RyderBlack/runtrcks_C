@@ -46,4 +46,6 @@ add_executable(Runtracks_C main.c
         Day03/my_sqrt.h
         Day03/job05.c
         Day03/job05.h
+        Day03/fibonacci.c
+        Day03/fibonacci.h
 )
