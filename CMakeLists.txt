@@ -38,4 +38,6 @@ add_executable(Runtracks_C main.c
         Day02/job8.h
         Day03/my_atoi.c
         Day03/my_atoi.h
+        Day03/my_itoa.c
+        Day03/my_itoa.h
 )

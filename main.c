@@ -19,6 +19,8 @@
 #include "Day02/job7.h"
 #include "Day02/job8.h"
 #include "Day03/my_atoi.h"
+#include "Day03/my_itoa.h"
+
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -27,7 +29,7 @@
 //     }
 // }
 
-int main(int argc, char **argv) {
+int main(void) {
     // my_putchar('T');
     // my_putchar('\n');
     // my_putstr("Hello world\n");
@@ -180,11 +182,24 @@ int main(int argc, char **argv) {
     // job8(argc, argv);
 
 
-    int res;
-    res = my_atoi("123");
-    printf("Result: %d\n", res);
-    res = my_atoi("-42");
-    printf("Result: %d\n", res);
+    // int res;
+    // res = my_atoi("123");
+    // printf("Result: %d\n", res);
+    // res = my_atoi("-42");
+    // printf("Result: %d\n", res);
+
+
+    char *s;
+
+    s = my_itoa(1234);
+    printf("Result: %s\n", s);
+    free(s);
+    s = my_itoa(-42);
+    printf("Result: %s\n", s);
+    free(s);
+    s = my_itoa(0);
+    printf("Result: %s\n", s);
+    free(s);
 
     return 0;
 }
