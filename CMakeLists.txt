@@ -42,4 +42,6 @@ add_executable(Runtracks_C main.c
         Day03/my_itoa.h
         Day03/my_power.c
         Day03/my_power.h
+        Day03/my_sqrt.c
+        Day03/my_sqrt.h
 )

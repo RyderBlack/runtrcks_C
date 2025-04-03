@@ -21,7 +21,7 @@
 #include "Day03/my_atoi.h"
 #include "Day03/my_itoa.h"
 #include "Day03/my_power.h"
-
+#include "Day03/my_sqrt.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -202,19 +202,30 @@ int main(void) {
     // printf("Result: %s\n", s);
     // free(s);
 
+    // int res;
+    //
+    // res = power(2, 3);
+    // printf("2^3 = %d\n", res);
+    //
+    // res = power(5, 0);
+    // printf("5^0 = %d\n", res);
+    //
+    // res = power(3, 4);
+    // printf("3^4 = %d\n", res);
+    //
+    // res = power(2, -1);
+    // printf("2^-1 = %d\n", res);
+
     int res;
 
-    res = power(2, 3);
-    printf("2^3 = %d\n", res);
-
-    res = power(5, 0);
-    printf("5^0 = %d\n", res);
-
-    res = power(3, 4);
-    printf("3^4 = %d\n", res);
-
-    res = power(2, -1);
-    printf("2^-1 = %d\n", res);
+    res = my_sqrt(4);
+    printf("sqrt(4) = %d\n", res);
+    res = my_sqrt(16);
+    printf("sqrt(16) = %d\n", res);
+    res = my_sqrt(14);
+    printf("sqrt(14) = %d\n", res);
+    res = my_sqrt(-9);
+    printf("sqrt(-9) = %d\n", res);
 
 
     return 0;
