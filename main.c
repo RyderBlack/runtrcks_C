@@ -13,6 +13,7 @@
 #include "Day02/divide.h"
 #include "Day02/my_swap.h"
 #include "Day02/array_clone.h"
+#include "Day02/sort.h"
 
 
 int main(void) {
@@ -87,28 +88,45 @@ int main(void) {
     // swap(&x, &y);
     // printf("after swap : x = %d, y = %d\n", x, y);
 
-    char *original[] = {
-        "Hello",
-        "world",
-        "this",
-        "is",
-        "Cloning",
+    // char *original[] = {
+    //     "Hello",
+    //     "world",
+    //     "this",
+    //     "is",
+    //     "Cloning",
+    //     NULL
+    // };
+    //
+    // int n = 3;
+    // char **copy = array_clone(original, n);
+    //
+    //
+    // printf("cloned array :\n");
+    // for (int i = 0; copy[i] != NULL; i++) {
+    //     printf("copy[%d] = %s\n", i, copy[i]);
+    // }
+    //
+    // for (int i = 0; copy[i] != NULL; i++) {
+    //     free(copy[i]);
+    // }
+    // free(copy);
+
+    char *words[] = {
+        "banana",
+        "apple",
+        "orange",
+        "kiwi",
         NULL
     };
 
-    int n = 3;
-    char **copy = array_clone(original, n);
+    my_sort(words);
 
-
-    printf("cloned array :\n");
-    for (int i = 0; copy[i] != NULL; i++) {
-        printf("copy[%d] = %s\n", i, copy[i]);
+    printf("sorted array :\n");
+    for (int i = 0; words[i] != NULL; i++) {
+        printf("%s\n", words[i]);
     }
 
-    for (int i = 0; copy[i] != NULL; i++) {
-        free(copy[i]);
-    }
-    free(copy);
+
 
     return 0;
 }

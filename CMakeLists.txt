@@ -26,4 +26,6 @@ add_executable(Runtracks_C main.c
         Day02/my_swap.h
         Day02/array_clone.c
         Day02/array_clone.h
+        Day02/sort.c
+        Day02/sort.h
 )
