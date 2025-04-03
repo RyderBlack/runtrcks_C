@@ -14,7 +14,15 @@
 #include "Day02/my_swap.h"
 #include "Day02/array_clone.h"
 #include "Day02/sort.h"
+#include "Day02/func_to_array.h"
 
+
+void my_strtoupper(char *str) {
+    for (int i = 0; str[i]; i++) {
+        if (str[i] >= 'a' && str[i] <= 'z')
+            str[i] -= 32; // Conversion ASCII
+    }
+}
 
 int main(void) {
     // my_putchar('T');
@@ -111,20 +119,26 @@ int main(void) {
     // }
     // free(copy);
 
-    char *words[] = {
-        "banana",
-        "apple",
-        "orange",
-        "kiwi",
-        NULL
-    };
+    // char *words[] = {
+    //     "banana",
+    //     "apple",
+    //     "orange",
+    //     "kiwi",
+    //     NULL
+    // };
+    //
+    // my_sort(words);
+    //
+    // printf("sorted array :\n");
+    // for (int i = 0; words[i] != NULL; i++) {
+    //     printf("%s\n", words[i]);
+    // }
 
-    my_sort(words);
+    char s1[] = "Hello";
+    char s2[] = "World";
+    char *strs[] = {s1, s2, NULL};
 
-    printf("sorted array :\n");
-    for (int i = 0; words[i] != NULL; i++) {
-        printf("%s\n", words[i]);
-    }
+    func_to_array(strs, my_strtoupper);
 
 
 

@@ -28,4 +28,6 @@ add_executable(Runtracks_C main.c
         Day02/array_clone.h
         Day02/sort.c
         Day02/sort.h
+        Day02/func_to_array.c
+        Day02/func_to_array.h
 )
