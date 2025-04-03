@@ -1,7 +1,3 @@
-//
-// Created by ryrym_i6sf5hg on 4/3/2025.
-//
-
 #include "delete_str_array.h"
 #include <stddef.h>
 #include <stdlib.h>

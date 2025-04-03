@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "unistd.h"
+#include <unistd.h>
 #include <string.h>
 #include "Day01/myputstr.h"
 #include "Day01/my_strlen.h"
@@ -16,15 +16,16 @@
 #include "Day02/sort.h"
 #include "Day02/func_to_array.h"
 #include "Day02/delete_str_array.h"
+#include "Day02/job7.h"
 
-void my_strtoupper(char *str) {
-    for (int i = 0; str[i]; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z')
-            str[i] -= 32; // Conversion ASCII
-    }
-}
+// void my_strtoupper(char *str) {
+//     for (int i = 0; str[i]; i++) {
+//         if (str[i] >= 'a' && str[i] <= 'z')
+//             str[i] -= 32; // Conversion ASCII
+//     }
+// }
 
-int main(void) {
+int main(int argc, char **argv) {
     // my_putchar('T');
     // my_putchar('\n');
     // my_putstr("Hello world\n");
@@ -140,26 +141,41 @@ int main(void) {
     //
     // func_to_array(strs, my_strtoupper);
 
-    char **array;
-    int i;
+    // char **array;
+    // int i;
+    //
+    // array = malloc(sizeof(char *) * 4);
+    // array[0] = strdup("Hello");
+    // array[1] = strdup("World");
+    // array[2] = strdup("LaPlateforme");
+    // array[3] = NULL;
+    //
+    // i = 0;
+    // while (array[i] != NULL)
+    // {
+    //     printf("%s\n", array[i]);
+    //     i++;
+    // }
+    //
+    // delete_str_array(&array);
+    //
+    // if (array == NULL)
+    //     printf("Array free and back to NULL\n");
 
-    array = malloc(sizeof(char *) * 4);
-    array[0] = strdup("Hello");
-    array[1] = strdup("World");
-    array[2] = strdup("LaPlateforme");
-    array[3] = NULL;
+    if (argc < 2) return 0;
 
-    i = 0;
-    while (array[i] != NULL)
-    {
-        printf("%s\n", array[i]);
-        i++;
+    for (int i = 1; i < argc; i++) {
+        char *copy = malloc(sizeof(char) * (strlen(argv[i]) + 1));
+        for (int j = 0; argv[i][j]; j++)
+            copy[j] = argv[i][j];
+        copy[strlen(argv[i])] = '\0';
+
+        strtolower(copy);
+        my_putstr(copy);
+        free(copy);
     }
 
-    delete_str_array(&array);
 
-    if (array == NULL)
-        printf("Array free and back to NULL\n");
 
     return 0;
 }

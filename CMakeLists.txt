@@ -32,4 +32,6 @@ add_executable(Runtracks_C main.c
         Day02/func_to_array.h
         Day02/delete_str_array.c
         Day02/delete_str_array.h
+        Day02/job7.c
+        Day02/job7.h
 )
