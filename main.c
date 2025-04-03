@@ -17,6 +17,7 @@
 #include "Day02/func_to_array.h"
 #include "Day02/delete_str_array.h"
 #include "Day02/job7.h"
+#include "Day02/job8.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -162,20 +163,20 @@ int main(int argc, char **argv) {
     // if (array == NULL)
     //     printf("Array free and back to NULL\n");
 
-    if (argc < 2) return 0;
+    // if (argc < 2) return 0;
+    //
+    // for (int i = 1; i < argc; i++) {
+    //     char *copy = malloc(sizeof(char) * (strlen(argv[i]) + 1));
+    //     for (int j = 0; argv[i][j]; j++)
+    //         copy[j] = argv[i][j];
+    //     copy[strlen(argv[i])] = '\0';
+    //
+    //     strtolower(copy);
+    //     my_putstr(copy);
+    //     free(copy);
+    // }
 
-    for (int i = 1; i < argc; i++) {
-        char *copy = malloc(sizeof(char) * (strlen(argv[i]) + 1));
-        for (int j = 0; argv[i][j]; j++)
-            copy[j] = argv[i][j];
-        copy[strlen(argv[i])] = '\0';
-
-        strtolower(copy);
-        my_putstr(copy);
-        free(copy);
-    }
-
-
+    job8(argc, argv);
 
     return 0;
 }
