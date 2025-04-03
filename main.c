@@ -18,6 +18,7 @@
 #include "Day02/delete_str_array.h"
 #include "Day02/job7.h"
 #include "Day02/job8.h"
+#include "Day03/my_atoi.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -176,7 +177,14 @@ int main(int argc, char **argv) {
     //     free(copy);
     // }
 
-    job8(argc, argv);
+    // job8(argc, argv);
+
+
+    int res;
+    res = my_atoi("123");
+    printf("Result: %d\n", res);
+    res = my_atoi("-42");
+    printf("Result: %d\n", res);
 
     return 0;
 }
