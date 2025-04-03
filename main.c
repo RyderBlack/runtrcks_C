@@ -15,7 +15,7 @@
 #include "Day02/array_clone.h"
 #include "Day02/sort.h"
 #include "Day02/func_to_array.h"
-
+#include "Day02/delete_str_array.h"
 
 void my_strtoupper(char *str) {
     for (int i = 0; str[i]; i++) {
@@ -134,13 +134,32 @@ int main(void) {
     //     printf("%s\n", words[i]);
     // }
 
-    char s1[] = "Hello";
-    char s2[] = "World";
-    char *strs[] = {s1, s2, NULL};
+    // char s1[] = "Hello";
+    // char s2[] = "World";
+    // char *strs[] = {s1, s2, NULL};
+    //
+    // func_to_array(strs, my_strtoupper);
 
-    func_to_array(strs, my_strtoupper);
+    char **array;
+    int i;
 
+    array = malloc(sizeof(char *) * 4);
+    array[0] = strdup("Hello");
+    array[1] = strdup("World");
+    array[2] = strdup("LaPlateforme");
+    array[3] = NULL;
 
+    i = 0;
+    while (array[i] != NULL)
+    {
+        printf("%s\n", array[i]);
+        i++;
+    }
+
+    delete_str_array(&array);
+
+    if (array == NULL)
+        printf("Array free and back to NULL\n");
 
     return 0;
 }
