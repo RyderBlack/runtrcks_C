@@ -48,4 +48,6 @@ add_executable(Runtracks_C main.c
         Day03/job05.h
         Day03/fibonacci.c
         Day03/fibonacci.h
+        Day03/itoa_hex.c
+        Day03/itoa_hex.h
 )

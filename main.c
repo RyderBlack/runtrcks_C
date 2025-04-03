@@ -24,6 +24,7 @@
 #include "Day03/my_sqrt.h"
 #include "Day03/job05.h"
 #include "Day03/fibonacci.h"
+#include "Day03/itoa_hex.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -229,11 +230,22 @@ int main(int argc, char **argv) {
     // res = my_sqrt(-9);
     // printf("sqrt(-9) = %d\n", res);
 
-    unsigned long long result;
+    // unsigned long long result;
+    // if (argc == 2)
+    // {
+    //     result = get_factorial(argv[1]);
+    //     printf("Factorial: %llu\n", result);
+    // }
+
+    char *result;
+    int num;
+
     if (argc == 2)
     {
-        result = get_factorial(argv[1]);
-        printf("Factorial: %llu\n", result);
+        num = atoi(argv[1]);
+        result = itoa_hex(num);
+        printf("Hexadecimal: %s\n", result);
+        free(result);
     }
 
 

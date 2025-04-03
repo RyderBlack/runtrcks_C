@@ -63,3 +63,4 @@ void print_fibonacci(char *s)
     ft_putnbr(fib);
     ft_putchar('\n');
 }
+
