@@ -20,6 +20,7 @@
 #include "Day02/job8.h"
 #include "Day03/my_atoi.h"
 #include "Day03/my_itoa.h"
+#include "Day03/my_power.h"
 
 
 // void my_strtoupper(char *str) {
@@ -189,17 +190,32 @@ int main(void) {
     // printf("Result: %d\n", res);
 
 
-    char *s;
+    // char *s;
+    //
+    // s = my_itoa(1234);
+    // printf("Result: %s\n", s);
+    // free(s);
+    // s = my_itoa(-42);
+    // printf("Result: %s\n", s);
+    // free(s);
+    // s = my_itoa(0);
+    // printf("Result: %s\n", s);
+    // free(s);
 
-    s = my_itoa(1234);
-    printf("Result: %s\n", s);
-    free(s);
-    s = my_itoa(-42);
-    printf("Result: %s\n", s);
-    free(s);
-    s = my_itoa(0);
-    printf("Result: %s\n", s);
-    free(s);
+    int res;
+
+    res = power(2, 3);
+    printf("2^3 = %d\n", res);
+
+    res = power(5, 0);
+    printf("5^0 = %d\n", res);
+
+    res = power(3, 4);
+    printf("3^4 = %d\n", res);
+
+    res = power(2, -1);
+    printf("2^-1 = %d\n", res);
+
 
     return 0;
 }
