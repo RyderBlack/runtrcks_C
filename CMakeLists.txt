@@ -44,4 +44,6 @@ add_executable(Runtracks_C main.c
         Day03/my_power.h
         Day03/my_sqrt.c
         Day03/my_sqrt.h
+        Day03/job05.c
+        Day03/job05.h
 )

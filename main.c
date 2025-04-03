@@ -22,6 +22,7 @@
 #include "Day03/my_itoa.h"
 #include "Day03/my_power.h"
 #include "Day03/my_sqrt.h"
+#include "Day03/job05.h"
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -30,7 +31,7 @@
 //     }
 // }
 
-int main(void) {
+int main(int argc, char **argv) {
     // my_putchar('T');
     // my_putchar('\n');
     // my_putstr("Hello world\n");
@@ -216,16 +217,23 @@ int main(void) {
     // res = power(2, -1);
     // printf("2^-1 = %d\n", res);
 
-    int res;
+    // int res;
+    //
+    // res = my_sqrt(4);
+    // printf("sqrt(4) = %d\n", res);
+    // res = my_sqrt(16);
+    // printf("sqrt(16) = %d\n", res);
+    // res = my_sqrt(14);
+    // printf("sqrt(14) = %d\n", res);
+    // res = my_sqrt(-9);
+    // printf("sqrt(-9) = %d\n", res);
 
-    res = my_sqrt(4);
-    printf("sqrt(4) = %d\n", res);
-    res = my_sqrt(16);
-    printf("sqrt(16) = %d\n", res);
-    res = my_sqrt(14);
-    printf("sqrt(14) = %d\n", res);
-    res = my_sqrt(-9);
-    printf("sqrt(-9) = %d\n", res);
+    unsigned long long result;
+    if (argc == 2)
+    {
+        result = get_factorial(argv[1]);
+        printf("Factorial: %llu\n", result);
+    }
 
 
     return 0;
