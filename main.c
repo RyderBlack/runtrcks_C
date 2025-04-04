@@ -25,6 +25,8 @@
 #include "Day03/job05.h"
 #include "Day03/fibonacci.h"
 #include "Day03/itoa_hex.h"
+#include "Day04/manhattan.h"
+
 
 // void my_strtoupper(char *str) {
 //     for (int i = 0; str[i]; i++) {
@@ -237,16 +239,26 @@ int main(int argc, char **argv) {
     //     printf("Factorial: %llu\n", result);
     // }
 
-    char *result;
-    int num;
+    // char *result;
+    // int num;
+    //
+    // if (argc == 2)
+    // {
+    //     num = atoi(argv[1]);
+    //     result = itoa_hex(num);
+    //     printf("Hexadecimal: %s\n", result);
+    //     free(result);
+    // }
 
-    if (argc == 2)
-    {
-        num = atoi(argv[1]);
-        result = itoa_hex(num);
-        printf("Hexadecimal: %s\n", result);
-        free(result);
-    }
+
+    point p1 = {2, 3};
+    point p2 = {5, 1};
+    int d = manhattan(p1, p2);
+    printf("Distance de Manhattan entre p1 et p2 : %d\n", d);
+
+    point p3 = {-2, -4};
+    point p4 = {1, 2};
+    printf("Distance de Manhattan entre p3 et p4 : %d\n", manhattan(p3, p4));
 
 
     return 0;
